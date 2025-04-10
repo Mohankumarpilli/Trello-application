@@ -60,8 +60,8 @@ const BoarDetails = () => {
 
     const handleCloseList = async (id) => {
         try {
-            await trelloApi.closeList(id); // assuming this closes it on backend
-            dispatch({ type: "SET_CLOSE_LIST", payload: id }); // ✅ fixed
+            await trelloApi.closeList(id); 
+            dispatch({ type: "SET_CLOSE_LIST", payload: id });
         } catch (err) {
             dispatch({ type: "SET_ERROR", payload: "Failed to close list" });
         }
